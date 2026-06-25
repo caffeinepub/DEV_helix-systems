@@ -1,0 +1,22 @@
+{
+  "overview": "Helix Systems is an internal company data explorer for a software/robotics company, displaying 15 datasets across a dashboard and allowing JSON data uploads.",
+  "features": [
+    "Company overview dashboard with key metric stat cards",
+    "Products and offices display on the main dashboard",
+    "15 datasets stored and queryable from the backend",
+    "Data upload panel with file drop zone for JSON files",
+    "Live record count display after upload",
+    "Pre-populated sample data with realistic company records",
+    "SVG double helix logo and professional corporate design",
+    "Sidebar navigation between Dashboard and Upload Data"
+  ],
+  "category": "data-explorer",
+  "tags": [
+    "internal-tools",
+    "data-management",
+    "corporate",
+    "robotics",
+    "dashboard"
+  ],
+  "last_updated": "2026-06-25T09:59:00.578Z"
+}

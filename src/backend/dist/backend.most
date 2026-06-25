@@ -1,0 +1,324 @@
+// Version: 4.0.0
+type Contract__160538542 =
+  {
+    department : Text;
+    endDate : Text;
+    kind : Text;
+    startDate : Text;
+    status : Text;
+    title : Text;
+    valueUsd : Nat;
+    vendor : Text
+  };
+type Contract__961382617 =
+  {
+    department : Text;
+    endDate : Text;
+    kind : Text;
+    startDate : Text;
+    status : Text;
+    title : Text;
+    valueUsd : Nat;
+    vendor : Text
+  };
+type ContractorAssignment__334134273 =
+  {
+    allocationPercent : Nat;
+    contractor : Text;
+    endDate : ?Text;
+    project : Text;
+    startDate : Text
+  };
+type ContractorAssignment__350855994 =
+  {
+    allocationPercent : Nat;
+    contractor : Text;
+    endDate : ?Text;
+    project : Text;
+    startDate : Text
+  };
+type Contractor__241747242 =
+  {
+    agency : Text;
+    contractEnd : Text;
+    contractStart : Text;
+    country : Text;
+    department : Text;
+    email : Text;
+    hourlyRateUsd : Nat;
+    name : Text;
+    status : Text
+  };
+type Contractor__411894843 =
+  {
+    agency : Text;
+    contractEnd : Text;
+    contractStart : Text;
+    country : Text;
+    department : Text;
+    email : Text;
+    hourlyRateUsd : Nat;
+    name : Text;
+    status : Text
+  };
+type Customer__263943254 =
+  {
+    accountManager : Text;
+    churnDate : ?Text;
+    companyName : Text;
+    country : Text;
+    industry : Text;
+    monthlyRevenueUsd : Nat;
+    plan : Text;
+    signupDate : Text
+  };
+type Customer__365046245 =
+  {
+    accountManager : Text;
+    churnDate : ?Text;
+    companyName : Text;
+    country : Text;
+    industry : Text;
+    monthlyRevenueUsd : Nat;
+    plan : Text;
+    signupDate : Text
+  };
+type Department__1001924832 =
+  {annualBudgetUsd : Nat; costCenter : Text; foundedYear : Nat; name : Text};
+type Department__890815984 =
+  {annualBudgetUsd : Nat; costCenter : Text; foundedYear : Nat; name : Text};
+type EmployeeAssignment__278525030 =
+  {
+    allocationPercent : Nat;
+    employee : Text;
+    endDate : ?Text;
+    project : Text;
+    startDate : Text
+  };
+type EmployeeAssignment__772827140 =
+  {
+    allocationPercent : Nat;
+    employee : Text;
+    endDate : ?Text;
+    project : Text;
+    startDate : Text
+  };
+type Employee__476045079 =
+  {
+    country : Text;
+    department : Text;
+    email : Text;
+    employmentStatus : Text;
+    hireDate : Text;
+    jobTitle : Text;
+    level : Nat;
+    manager : ?Text;
+    name : Text;
+    office : Text;
+    salaryUsd : Nat;
+    terminationDate : ?Text;
+    vacationDaysRemaining : Nat
+  };
+type Employee__928859810 =
+  {
+    country : Text;
+    department : Text;
+    email : Text;
+    employmentStatus : Text;
+    hireDate : Text;
+    jobTitle : Text;
+    level : Nat;
+    manager : ?Text;
+    name : Text;
+    office : Text;
+    salaryUsd : Nat;
+    terminationDate : ?Text;
+    vacationDaysRemaining : Nat
+  };
+type Expense__25862281 =
+  {
+    amountUsd : Nat;
+    approvalStatus : Text;
+    category : Text;
+    date : Text;
+    department : Text;
+    payee : Text;
+    project : ?Text;
+    submittedBy : Text
+  };
+type Expense__898171383 =
+  {
+    amountUsd : Nat;
+    approvalStatus : Text;
+    category : Text;
+    date : Text;
+    department : Text;
+    payee : Text;
+    project : ?Text;
+    submittedBy : Text
+  };
+type InternAssignment__133969988 =
+  {allocationPercent : Nat; intern : Text; project : Text};
+type InternAssignment__259976824 =
+  {allocationPercent : Nat; intern : Text; project : Text};
+type Intern__783825364 =
+  {
+    department : Text;
+    email : Text;
+    endDate : Text;
+    mentor : Text;
+    monthlyStipendUsd : Nat;
+    name : Text;
+    startDate : Text;
+    university : Text
+  };
+type Intern__966331510 =
+  {
+    department : Text;
+    email : Text;
+    endDate : Text;
+    mentor : Text;
+    monthlyStipendUsd : Nat;
+    name : Text;
+    startDate : Text;
+    university : Text
+  };
+type Invoice__202323130 =
+  {
+    amountUsd : Nat;
+    contract : ?Text;
+    dueDate : Text;
+    issueDate : Text;
+    paidDate : ?Text;
+    status : Text;
+    vendor : Text
+  };
+type Invoice__772203955 =
+  {
+    amountUsd : Nat;
+    contract : ?Text;
+    dueDate : Text;
+    issueDate : Text;
+    paidDate : ?Text;
+    status : Text;
+    vendor : Text
+  };
+type NewActor__856079499 =
+  {
+    contractorAssignments : [ContractorAssignment__334134273];
+    contractors : [Contractor__411894843];
+    contracts : [Contract__961382617];
+    customers : [Customer__365046245];
+    departments : [Department__890815984];
+    employeeAssignments : [EmployeeAssignment__772827140];
+    employees : [Employee__928859810];
+    expenses : [Expense__898171383];
+    internAssignments : [InternAssignment__133969988];
+    interns : [Intern__783825364];
+    invoices : [Invoice__202323130];
+    offices : [Office__1018645652];
+    products : [Product__974752243];
+    projects : [Project__720172197];
+    vendors : [Vendor__203456341]
+  };
+type Office__1018645652 =
+  {
+    addressLine : Text;
+    capacity : Nat;
+    city : Text;
+    country : Text;
+    isHq : Bool;
+    openedDate : Text
+  };
+type Office__705945541 =
+  {
+    addressLine : Text;
+    capacity : Nat;
+    city : Text;
+    country : Text;
+    isHq : Bool;
+    openedDate : Text
+  };
+type OldActor__770544905 = {};
+type Product__853085059 =
+  {
+    annualRevenueUsd : Nat;
+    codename : Text;
+    department : Text;
+    launchDate : Text;
+    lifecycle : Text;
+    name : Text
+  };
+type Product__974752243 =
+  {
+    annualRevenueUsd : Nat;
+    codename : Text;
+    department : Text;
+    launchDate : Text;
+    lifecycle : Text;
+    name : Text
+  };
+type Project__720172197 =
+  {
+    actualEndDate : ?Text;
+    budgetUsd : Nat;
+    codename : Text;
+    department : Text;
+    lead : Text;
+    name : Text;
+    plannedEndDate : Text;
+    product : ?Text;
+    startDate : Text;
+    status : Text
+  };
+type Project__762223144 =
+  {
+    actualEndDate : ?Text;
+    budgetUsd : Nat;
+    codename : Text;
+    department : Text;
+    lead : Text;
+    name : Text;
+    plannedEndDate : Text;
+    product : ?Text;
+    startDate : Text;
+    status : Text
+  };
+type Vendor__203456341 =
+  {
+    country : Text;
+    createdDate : Text;
+    name : Text;
+    paymentTermsDays : Nat;
+    primaryContactName : Text;
+    taxId : Text
+  };
+type Vendor__545299696 =
+  {
+    country : Text;
+    createdDate : Text;
+    name : Text;
+    paymentTermsDays : Nat;
+    primaryContactName : Text;
+    taxId : Text
+  };
+{
+  "20260625_000000" : OldActor__770544905 -> NewActor__856079499
+}
+actor  {
+  stable var contractorAssignments : [ContractorAssignment__350855994];
+  stable var contractors : [Contractor__241747242];
+  stable var contracts : [Contract__160538542];
+  stable var customers : [Customer__263943254];
+  stable var departments : [Department__1001924832];
+  stable var employeeAssignments : [EmployeeAssignment__278525030];
+  stable var employees : [Employee__476045079];
+  stable var expenses : [Expense__25862281];
+  stable var internAssignments : [InternAssignment__259976824];
+  stable var interns : [Intern__966331510];
+  stable var invoices : [Invoice__772203955];
+  stable var offices : [Office__705945541];
+  stable var products : [Product__853085059];
+  stable var projects : [Project__762223144];
+  stable var vendors : [Vendor__545299696]
+};

@@ -1,0 +1,201 @@
+type Vendor = 
+ record {
+   country: text;
+   createdDate: text;
+   name: text;
+   paymentTermsDays: nat;
+   primaryContactName: text;
+   taxId: text;
+ };
+type Project = 
+ record {
+   actualEndDate: opt text;
+   budgetUsd: nat;
+   codename: text;
+   department: text;
+   lead: text;
+   name: text;
+   plannedEndDate: text;
+   product: opt text;
+   startDate: text;
+   status: text;
+ };
+type Product = 
+ record {
+   annualRevenueUsd: nat;
+   codename: text;
+   department: text;
+   launchDate: text;
+   lifecycle: text;
+   name: text;
+ };
+type Office = 
+ record {
+   addressLine: text;
+   capacity: nat;
+   city: text;
+   country: text;
+   isHq: bool;
+   openedDate: text;
+ };
+type Invoice = 
+ record {
+   amountUsd: nat;
+   contract: opt text;
+   dueDate: text;
+   issueDate: text;
+   paidDate: opt text;
+   status: text;
+   vendor: text;
+ };
+type InternAssignment = 
+ record {
+   allocationPercent: nat;
+   intern: text;
+   project: text;
+ };
+type Intern = 
+ record {
+   department: text;
+   email: text;
+   endDate: text;
+   mentor: text;
+   monthlyStipendUsd: nat;
+   name: text;
+   startDate: text;
+   university: text;
+ };
+type Expense = 
+ record {
+   amountUsd: nat;
+   approvalStatus: text;
+   category: text;
+   date: text;
+   department: text;
+   payee: text;
+   project: opt text;
+   submittedBy: text;
+ };
+type EmployeeAssignment = 
+ record {
+   allocationPercent: nat;
+   employee: text;
+   endDate: opt text;
+   project: text;
+   startDate: text;
+ };
+type Employee = 
+ record {
+   country: text;
+   department: text;
+   email: text;
+   employmentStatus: text;
+   hireDate: text;
+   jobTitle: text;
+   level: nat;
+   manager: opt text;
+   name: text;
+   office: text;
+   salaryUsd: nat;
+   terminationDate: opt text;
+   vacationDaysRemaining: nat;
+ };
+type Department = 
+ record {
+   annualBudgetUsd: nat;
+   costCenter: text;
+   foundedYear: nat;
+   name: text;
+ };
+type Customer = 
+ record {
+   accountManager: text;
+   churnDate: opt text;
+   companyName: text;
+   country: text;
+   industry: text;
+   monthlyRevenueUsd: nat;
+   plan: text;
+   signupDate: text;
+ };
+type ContractorAssignment = 
+ record {
+   allocationPercent: nat;
+   contractor: text;
+   endDate: opt text;
+   project: text;
+   startDate: text;
+ };
+type Contractor = 
+ record {
+   agency: text;
+   contractEnd: text;
+   contractStart: text;
+   country: text;
+   department: text;
+   email: text;
+   hourlyRateUsd: nat;
+   name: text;
+   status: text;
+ };
+type Contract = 
+ record {
+   department: text;
+   endDate: text;
+   kind: text;
+   startDate: text;
+   status: text;
+   title: text;
+   valueUsd: nat;
+   vendor: text;
+ };
+service : {
+  __contractorAssignments: (io: opt nat, count: opt nat) ->
+   (vec ContractorAssignment) query;
+  __contractors: (io: opt nat, count: opt nat) -> (vec Contractor) query;
+  __contracts: (io: opt nat, count: opt nat) -> (vec Contract) query;
+  __customers: (io: opt nat, count: opt nat) -> (vec Customer) query;
+  __departments: (io: opt nat, count: opt nat) -> (vec Department) query;
+  __employeeAssignments: (io: opt nat, count: opt nat) ->
+   (vec EmployeeAssignment) query;
+  __employees: (io: opt nat, count: opt nat) -> (vec Employee) query;
+  __expenses: (io: opt nat, count: opt nat) -> (vec Expense) query;
+  __internAssignments: (io: opt nat, count: opt nat) ->
+   (vec InternAssignment) query;
+  __interns: (io: opt nat, count: opt nat) -> (vec Intern) query;
+  __invoices: (io: opt nat, count: opt nat) -> (vec Invoice) query;
+  __offices: (io: opt nat, count: opt nat) -> (vec Office) query;
+  __products: (io: opt nat, count: opt nat) -> (vec Product) query;
+  __projects: (io: opt nat, count: opt nat) -> (vec Project) query;
+  __vendors: (io: opt nat, count: opt nat) -> (vec Vendor) query;
+  getAllContractorAssignments: () -> (vec ContractorAssignment) query;
+  getAllContractors: () -> (vec Contractor) query;
+  getAllContracts: () -> (vec Contract) query;
+  getAllCustomers: () -> (vec Customer) query;
+  getAllDepartments: () -> (vec Department) query;
+  getAllEmployeeAssignments: () -> (vec EmployeeAssignment) query;
+  getAllEmployees: () -> (vec Employee) query;
+  getAllExpenses: () -> (vec Expense) query;
+  getAllInternAssignments: () -> (vec InternAssignment) query;
+  getAllInterns: () -> (vec Intern) query;
+  getAllInvoices: () -> (vec Invoice) query;
+  getAllOffices: () -> (vec Office) query;
+  getAllProducts: () -> (vec Product) query;
+  getAllProjects: () -> (vec Project) query;
+  getAllVendors: () -> (vec Vendor) query;
+  uploadContractorAssignments: (data: vec ContractorAssignment) -> ();
+  uploadContractors: (data: vec Contractor) -> ();
+  uploadContracts: (data: vec Contract) -> ();
+  uploadCustomers: (data: vec Customer) -> ();
+  uploadDepartments: (data: vec Department) -> ();
+  uploadEmployeeAssignments: (data: vec EmployeeAssignment) -> ();
+  uploadEmployees: (data: vec Employee) -> ();
+  uploadExpenses: (data: vec Expense) -> ();
+  uploadInternAssignments: (data: vec InternAssignment) -> ();
+  uploadInterns: (data: vec Intern) -> ();
+  uploadInvoices: (data: vec Invoice) -> ();
+  uploadOffices: (data: vec Office) -> ();
+  uploadProducts: (data: vec Product) -> ();
+  uploadProjects: (data: vec Project) -> ();
+  uploadVendors: (data: vec Vendor) -> ();
+}
